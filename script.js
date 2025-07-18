@@ -1,10 +1,11 @@
-const player = ducument.getElementBy("player");
-const buttons = document.getElementBy("buttons");
+const player = document.getElementById("player");
+const buttons = document.querySelectorAll("#buttons button"); // ✅ selects all buttons
 
+console.log(buttons)
 buttons.forEach((button)=>{
-	i	button.onclick=(e)=>{
+		button.onclick=(e)=>{
 		const {name} = e.target;
-		player.stop();
+		player.pause();
 		if(name==="stop")
 			return;
 		player.src = `/sounds/${name}/.mp3`;
