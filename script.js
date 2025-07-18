@@ -5,10 +5,14 @@ console.log(buttons)
 buttons.forEach((button)=>{
 		button.onclick=(e)=>{
 		const {name} = e.target;
+			 if (name === "stop") {
+      player.pause();
+      player.currentTime = 0;
+      return;
+    }
 		player.pause();
-		if(name==="stop")
-			return;
-		player.src = `./sounds/${name}/.mp3`;
+		
+		player.src = `./sounds/${name}.mp3`;
 		player.play();
 	}
 })
