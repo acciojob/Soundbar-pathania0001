@@ -8,7 +8,7 @@ buttons.forEach((button)=>{
 		player.pause();
 		if(name==="stop")
 			return;
-		player.src = `/sounds/${name}/.mp3`;
+		player.src = `./sounds/${name}/.mp3`;
 		player.play();
 	}
 })
